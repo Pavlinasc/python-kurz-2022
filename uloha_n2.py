@@ -28,4 +28,5 @@ for kod in sklad:
         #mnozstvo = sklad(mnozstvo) - mnozstvo
         print("Vase objednavka je prijata.")
 
+
         
