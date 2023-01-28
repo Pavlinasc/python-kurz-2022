@@ -27,3 +27,4 @@ for kod in sklad:
     elif mnozstvo <= sklad(mnozstvo):
         #mnozstvo = sklad(mnozstvo) - mnozstvo
         print("Vase objednavka je prijata.")
+print
