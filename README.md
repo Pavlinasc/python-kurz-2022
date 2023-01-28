@@ -1,1 +1,1 @@
-# python-kurz-2023
+# python-kurz-2022
