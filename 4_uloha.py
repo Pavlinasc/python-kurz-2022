@@ -1,21 +1,18 @@
-predvolba = "+420"
+def overcislo(cislo):
+    if len(cislo) == 9 or (len(cislo) == 13 and predvolba("+420")):
+        return True
+    else:
+        return False
 
-def cislo(predvolba, mobil):
-    vypocet = predvolba + mobil
-    return vypocet
+def cenasms(sprava):
+    znaky=len(sprava)
+    cena=(znaky//180+1)*3
+    return cena
 
-tel_cislo = input("Zadej telefone cislo: ")
-if len(tel_cislo) == 9:
-    print("Spravne cislo")
-    print("True")
+cislo = input("Zadej telefone cislo: ")
+if not overcislo(cislo):
+    print("Neplatne cislo")
 else:
-    print("Zadaj 9 mistne cislo")
-    print("False")
-
-print(cislo(predvolba,tel_cislo))
-
-sprava=input("teraz zadaj tvoju SMS spravu: ")
-if len(sprava) < 180:
-    print("Platis iba 3kc")
-elif len(sprava) >= 180:
-    print("Platis uz 6ks")
+    sprava = input("teraz zadaj tvoju SMS spravu: ")
+    cena = cenasms(sprava)
+    print("Cena spravy je", cena, "CZK")
