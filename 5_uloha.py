@@ -24,6 +24,6 @@ for teplota in teploty:
 print(n_seznam)
 
 novy_seznam = []
-#for teplota in teploty:
-#    novy_seznam=(teplota[0] + teplota[3])
-#print(novy_seznam)
+for teplota in teploty:
+    novy_seznam=(teplota[1], teplota[3])
+print(novy_seznam)
