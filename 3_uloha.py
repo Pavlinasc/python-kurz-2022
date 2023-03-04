@@ -4,13 +4,15 @@ with open("body.json", encoding="utf-8") as vstupni_soubor:
     data = json.load(vstupni_soubor)
 
 print(data)
-#neviem, ako mam prepisat values :(
+#novy slovnik a pass/fail
+
+novy_slovik = {}
 for item, body in data.items():
     if body >= 60:
-        body == "Pass"
+        novy_slovik[item] = "Pass"
     else:
-        body == "Fail"
-print(data)
+        novy_slovik[item] = "Fail"
+print(novy_slovik)
 
 with open("vysledek.json", mode="w", encoding="utf-8") as vystupni_soubor:
-    json.dump(data, vystupni_soubor, ensure_ascii=False, indent=4)
+    json.dump(novy_slovik, vystupni_soubor, ensure_ascii=False, indent=4)
